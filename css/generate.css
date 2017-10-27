@@ -1,0 +1,53 @@
+body {
+  margin: 15px 50% 5px 5%;
+}
+
+.rest {
+  padding-bottom: 40px;
+}
+
+.floating-table {
+  position: fixed;
+  top: 5%;
+  left: 60%;
+  right: 10%;
+  bottom: 5%;
+  z-index: 9999;
+}
+
+.room {
+  background-color: #BDBDBD;
+}
+
+.deep {
+  width: 60px;
+  height: 40px;
+}
+
+.shallow {
+  width: 60px;
+  height: 5px;
+}
+
+.node {
+  width: 5px;
+  height: 5px;
+}
+
+.beam {
+  width: 60px;
+  height: 5px;
+  background-color: #D8D8D8;
+}
+
+.column {
+  width: 5px;
+  height: 40px;
+  background-color: #D8D8D8;
+}
+
+.shin {
+  width: 5px;
+  height: 40px;
+  background-color: #BDBDBD;
+}

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- 文字エンコードをUTF-8に指定 -->
+    <meta charset="utf-8">
+    <!-- レンダリングを最新に指定 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <!-- 拡大を禁止 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+    <title>モデル情報登録</title>
+
+    <!-- Semantic UI を読み込む -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.10/semantic.min.css">
+    <!-- Vue.js を読み込む -->
+    <script src="https://unpkg.com/vue@2.3.3/dist/vue.js"></script>
+
+    <!-- CSSファイルを読み込む -->
+    <link rel="stylesheet" href="./css/generate.css">
+
+  </head>
+
+  <body>
+    <!-- Vue.jsで読み込む -->
+    <div id="app">
+      <div class="ui main container">
+        <h1 class="center">モデル諸元の設定</h1>
+        <form class="ui large form rest">
+
+        <p>スパン[m]</p>
+        <div class="field">
+          <div class="ui left icon input">
+            <i class="resize horizontal icon"></i>
+            <input type="text" placeholder="width  ex) 6">
+          </div>
+        </div>
+
+        <p>階高[m]</p>
+        <div class="field">
+          <div class="ui left icon input">
+            <i class="resize vertical icon"></i>
+            <input type="text" placeholder="height  ex) 4">
+          </div>
+        </div>
+
+        <p>柱断面[mm]</p>
+        <div class="field">
+          <div class="ui left icon input">
+            <i class="bullseye icon"></i>
+            <input type="text" placeholder="column section  ex) 500*500*12">
+          </div>
+        </div>
+
+        <p>梁断面[mm]</p>
+        <div class="field">
+          <div class="ui left icon input">
+            <i class="bullseye icon"></i>
+            <input type="text" placeholder="beam section ex)  600*250*16*12">
+          </div>
+        </div>
+
+        <p>床質量[t](1㎡あたり)</p>
+        <div class="field">
+          <div class="ui left icon input">
+            <i class="cube icon"></i>
+            <input type="text" placeholder="floor mass  ex) 1">
+          </div>
+        </div>
+
+        <p>地震波</p>
+        <div class="field">
+          <div class="ui left icon input">
+            <i class="file icon"></i>
+            <input type="file">
+          </div>
+        </div>
+
+        <p>時間間隔[s]</p>
+        <div class="field">
+          <div class="ui left icon input">
+            <i class="wait icon"></i>
+            <input type="text" placeholder="time step  ex)  0.02">
+          </div>
+        </div>
+
+        <p>ステップ数</p>
+        <div class="field">
+          <div class="ui left icon input">
+            <i class="calculator icon"></i>
+            <input type="text" placeholder="step count  ex) 2688">
+          </div>
+        </div>
+
+        </form>
+      </div>
+
+      <table id="TBL" class="floating-table">
+        <tr>
+          <td class="deep room"></td><td class="shin room"></td><td class="deep room"></td>
+          <td class="shin room"></td><td class="deep room"></td><td class="shin room"></td>
+          <td class="deep room"></td><td class="shin room"></td><td class="deep room"></td>
+        </tr>
+        <tr>
+          <td class="shallow room"></td><td class="node"></td><td class="beam" v-on:mouseover="over"></td>
+          <td class="node"></td><td class="beam" v-on:mouseover="over"></td><td class="node"></td>
+          <td class="beam" v-on:mouseover="over"></td><td class="node"></td><td class="shallow room"></td>
+        </tr>
+        <tr>
+          <td class="deep room"></td><td class="column" v-on:mouseover="over"></td><td class="deep room"></td>
+          <td class="column" v-on:mouseover="over"></td><td class="deep room"></td><td class="column" v-on:mouseover="over"></td>
+          <td class="deep room"></td><td class="column" v-on:mouseover="over"></td><td class="deep room"></td>
+        </tr>
+        <tr>
+          <td class="shallow room"></td><td class="node"></td><td class="beam" v-on:mouseover="over"></td>
+          <td class="node"></td><td class="beam" v-on:mouseover="over"></td><td class="node"></td>
+          <td class="beam" v-on:mouseover="over"></td><td class="node"></td><td class="shallow room"></td>
+        </tr>
+        <tr>
+          <td class="deep room"></td><td class="column" v-on:mouseover="over"></td><td class="deep room"></td>
+          <td class="column" v-on:mouseover="over"></td><td class="deep room"></td><td class="column" v-on:mouseover="over"></td>
+          <td class="deep room"></td><td class="column" v-on:mouseover="over"></td><td class="deep room"></td>
+        </tr>
+        <tr>
+          <td class="shallow room"></td><td class="node"></td><td class="beam" v-on:mouseover="over"></td>
+          <td class="node"></td><td class="beam" v-on:mouseover="over"></td><td class="node"></td>
+          <td class="beam" v-on:mouseover="over"></td><td class="node"></td><td class="shallow room"></td>
+        </tr>
+        <tr>
+          <td class="deep room"></td><td class="column" v-on:mouseover="over"></td><td class="deep room"></td>
+          <td class="column" v-on:mouseover="over"></td><td class="deep room"></td><td class="column" v-on:mouseover="over"></td>
+          <td class="deep room"></td><td class="column" v-on:mouseover="over"></td><td class="deep room"></td>
+        </tr>
+        <tr>
+          <td class="shallow room"></td><td class="node"></td><td class="beam" v-on:mouseover="over"></td>
+          <td class="node"></td><td class="beam" v-on:mouseover="over"></td><td class="node"></td>
+          <td class="beam" v-on:mouseover="over"></td><td class="node"></td><td class="shallow room"></td>
+        </tr>
+        <tr>
+          <td class="deep room"></td><td class="column" v-on:mouseover="over"></td><td class="deep room"></td>
+          <td class="column" v-on:mouseover="over"></td><td class="deep room"></td><td class="column" v-on:mouseover="over"></td>
+          <td class="deep room"></td><td class="column" v-on:mouseover="over"></td><td class="deep room"></td>
+        </tr>
+        <tr>
+          <td class="shallow room"></td><td class="node"></td><td class="beam" v-on:mouseover="over"></td>
+          <td class="node"></td><td class="beam" v-on:mouseover="over"></td><td class="node"></td>
+          <td class="beam" v-on:mouseover="over"></td><td class="node"></td><td class="shallow room"></td>
+        </tr>
+        <tr>
+          <td class="deep room"></td><td class="column" v-on:mouseover="over"></td><td class="deep room"></td>
+          <td class="column" v-on:mouseover="over"></td><td class="deep room"></td><td class="column" v-on:mouseover="over"></td>
+          <td class="deep room"></td><td class="column" v-on:mouseover="over"></td><td class="deep room"></td>
+        </tr>
+        <tr>
+          <td class="shallow room"></td><td class="node"></td><td class="beam" v-on:mouseover="over"></td>
+          <td class="node"></td><td class="beam" v-on:mouseover="over"></td><td class="node"></td>
+          <td class="beam" v-on:mouseover="over"></td><td class="node"></td><td class="shallow room"></td>
+        </tr>
+        <tr>
+          <td class="deep room"></td><td class="column" v-on:mouseover="over"></td><td class="deep room"></td>
+          <td class="column" v-on:mouseover="over"></td><td class="deep room"></td><td class="column" v-on:mouseover="over"></td>
+          <td class="deep room"></td><td class="column" v-on:mouseover="over"></td><td class="deep room"></td>
+        </tr>
+        <tr>
+          <td class="shallow room"></td><td class="node"></td><td class="beam" v-on:mouseover="over"></td>
+          <td class="node"></td><td class="beam" v-on:mouseover="over"></td><td class="node"></td>
+          <td class="beam" v-on:mouseover="over"></td><td class="node"></td><td class="shallow room"></td>
+        </tr>
+        <tr>
+          <td class="deep room"></td><td class="column" v-on:mouseover="over"></td><td class="deep room"></td>
+          <td class="column" v-on:mouseover="over"></td><td class="deep room"></td><td class="column" v-on:mouseover="over"></td>
+          <td class="deep room"></td><td class="column" v-on:mouseover="over"></td><td class="deep room"></td>
+        </tr>
+        <tr>
+          <td class="shallow room"></td><td class="node"></td><td class="beam" v-on:mouseover="over"></td>
+          <td class="node"></td><td class="beam" v-on:mouseover="over"></td><td class="node"></td>
+          <td class="beam" v-on:mouseover="over"></td><td class="node"></td><td class="shallow room"></td>
+        </tr>
+        <tr>
+          <td class="deep room"></td><td class="column" v-on:mouseover="over"></td><td class="deep room"></td>
+          <td class="column" v-on:mouseover="over"></td><td class="deep room"></td><td class="column" v-on:mouseover="over"></td>
+          <td class="deep room"></td><td class="column" v-on:mouseover="over"></td><td class="deep room"></td>
+        </tr>
+        <tr>
+          <td class="shallow room"></td><td class="node"></td><td class="beam" v-on:mouseover="over"></td>
+          <td class="node"></td><td class="beam" v-on:mouseover="over"></td><td class="node"></td>
+          <td class="beam" v-on:mouseover="over"></td><td class="node"></td><td class="shallow room"></td>
+        </tr>
+        <tr>
+          <td class="deep room"></td><td class="column" v-on:mouseover="over"></td><td class="deep room"></td>
+          <td class="column" v-on:mouseover="over"></td><td class="deep room"></td><td class="column" v-on:mouseover="over"></td>
+          <td class="deep room"></td><td class="column" v-on:mouseover="over"></td><td class="deep room"></td>
+        </tr>
+        <tr>
+          <td class="shallow room"></td><td class="node"></td><td class="beam" v-on:mouseover="over"></td>
+          <td class="node"></td><td class="beam" v-on:mouseover="over"></td><td class="node"></td>
+          <td class="beam" v-on:mouseover="over"></td><td class="node"></td><td class="shallow room"></td>
+        </tr>
+        <tr>
+          <td class="deep room"></td><td class="column" v-on:mouseover="over"></td><td class="deep room"></td>
+          <td class="column" v-on:mouseover="over"></td><td class="deep room"></td><td class="column" v-on:mouseover="over"></td>
+          <td class="deep room"></td><td class="column" v-on:mouseover="over"></td><td class="deep room"></td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- 各ページで使うJavaScriptファイルはこの行より下で読み込む -->
+    <script src="./js/generate.js" charset="utf-8"></script>
+  </body>
+</html>
