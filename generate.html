@@ -14,7 +14,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.10/semantic.min.css">
     <!-- Vue.js を読み込む -->
     <script src="https://unpkg.com/vue@2.3.3/dist/vue.js"></script>
-
     <!-- CSSファイルを読み込む -->
     <link rel="stylesheet" href="./css/generate.css">
 
@@ -101,104 +100,104 @@
           <td class="deep room"></td><td class="shin room"></td><td class="deep room"></td>
         </tr>
         <tr>
-          <td class="shallow room"></td><td class="node"></td><td class="beam" v-on:mouseover="over"></td>
-          <td class="node"></td><td class="beam" v-on:mouseover="over"></td><td class="node"></td>
-          <td class="beam" v-on:mouseover="over"></td><td class="node"></td><td class="shallow room"></td>
+          <td class="shallow room"></td><td class="node"></td><td class="beam" v-bind:class="{active_b:isActive_b1}" v-on:click="isActive_b1=!isActive_b1"></td>
+          <td class="node"></td><td class="beam" v-bind:class="{active_b:isActive_b2}" v-on:click="isActive_b2=!isActive_b2"></td><td class="node"></td>
+          <td class="beam" v-bind:class="{active_b:isActive_b3}" v-on:click="isActive_b3=!isActive_b3"></td><td class="node"></td><td class="shallow room"></td>
         </tr>
         <tr>
-          <td class="deep room"></td><td class="column" v-on:mouseover="over"></td><td class="deep room"></td>
-          <td class="column" v-on:mouseover="over"></td><td class="deep room"></td><td class="column" v-on:mouseover="over"></td>
-          <td class="deep room"></td><td class="column" v-on:mouseover="over"></td><td class="deep room"></td>
+          <td class="deep room"></td><td class="column" v-bind:class="{active_c:isActive_c1}" v-on:click="isActive_c1=!isActive_c1"></td><td class="deep room"></td>
+          <td class="column" v-bind:class="{active_c:isActive_c2}" v-on:click="isActive_c2=!isActiv_c2"></td><td class="deep room"></td><td class="column" v-bind:class="{active_c:isActive_c3}" v-on:click="isActive_c3=!isActive_c3"></td>
+          <td class="deep room"></td><td class="column" v-bind:class="{active_c:isActive_c4}" v-on:click="isActive_c4=!isActive_c4"></td><td class="deep room"></td>
         </tr>
         <tr>
-          <td class="shallow room"></td><td class="node"></td><td class="beam" v-on:mouseover="over"></td>
-          <td class="node"></td><td class="beam" v-on:mouseover="over"></td><td class="node"></td>
-          <td class="beam" v-on:mouseover="over"></td><td class="node"></td><td class="shallow room"></td>
+          <td class="shallow room"></td><td class="node"></td><td class="beam" v-bind:class="{active_b:isActive_b4}" v-on:click="isActive_b4=!isActive_b4"></td>
+          <td class="node"></td><td class="beam" v-bind:class="{active_b:isActive_b5}" v-on:click="isActive_b5=!isActive_b5"></td><td class="node"></td>
+          <td class="beam" v-bind:class="{active_b:isActive_b6}" v-on:click="isActive_b6=!isActive_b6"></td><td class="node"></td><td class="shallow room"></td>
         </tr>
         <tr>
-          <td class="deep room"></td><td class="column" v-on:mouseover="over"></td><td class="deep room"></td>
-          <td class="column" v-on:mouseover="over"></td><td class="deep room"></td><td class="column" v-on:mouseover="over"></td>
-          <td class="deep room"></td><td class="column" v-on:mouseover="over"></td><td class="deep room"></td>
+          <td class="deep room"></td><td class="column" v-bind:class="{active_c:isActive_c5}" v-on:click="isActive_c5=!isActive_c5"></td><td class="deep room"></td>
+          <td class="column" v-bind:class="{active_c:isActive_c6}" v-on:click="isActive_c6=!isActive_c6"></td><td class="deep room"></td><td class="column" v-bind:class="{active_c:isActive_c7}" v-on:click="isActive_c7=!isActive_c7"></td>
+          <td class="deep room"></td><td class="column" v-bind:class="{active_c:isActive_c8}" v-on:click="isActive_c8=!isActive_c8"></td><td class="deep room"></td>
         </tr>
         <tr>
-          <td class="shallow room"></td><td class="node"></td><td class="beam" v-on:mouseover="over"></td>
-          <td class="node"></td><td class="beam" v-on:mouseover="over"></td><td class="node"></td>
-          <td class="beam" v-on:mouseover="over"></td><td class="node"></td><td class="shallow room"></td>
+          <td class="shallow room"></td><td class="node"></td><td class="beam" v-bind:class="{active_b:isActive_b7}" v-on:click="isActive_b7=!isActive_b7"></td>
+          <td class="node"></td><td class="beam" v-bind:class="{active_b:isActive_b8}" v-on:click="isActive_b8=!isActive_b8"></td><td class="node"></td>
+          <td class="beam" v-bind:class="{active_b:isActive_b9}" v-on:click="isActive_b9=!isActive_b9"></td><td class="node"></td><td class="shallow room"></td>
         </tr>
         <tr>
-          <td class="deep room"></td><td class="column" v-on:mouseover="over"></td><td class="deep room"></td>
-          <td class="column" v-on:mouseover="over"></td><td class="deep room"></td><td class="column" v-on:mouseover="over"></td>
-          <td class="deep room"></td><td class="column" v-on:mouseover="over"></td><td class="deep room"></td>
+          <td class="deep room"></td><td class="column" v-bind:class="{active_c:isActive_c9}" v-on:click="isActive_c9=!isActive_c9"></td><td class="deep room"></td>
+          <td class="column" v-bind:class="{active_c:isActive_c10}" v-on:click="isActive_c10=!isActive_c10"></td><td class="deep room"></td><td class="column" v-bind:class="{active_c:isActive_c11}" v-on:click="isActivec_11=!isActive_c11"></td>
+          <td class="deep room"></td><td class="column" v-bind:class="{active_c:isActive_c12}" v-on:click="isActive_c12=!isActive_c12"></td><td class="deep room"></td>
         </tr>
         <tr>
-          <td class="shallow room"></td><td class="node"></td><td class="beam" v-on:mouseover="over"></td>
-          <td class="node"></td><td class="beam" v-on:mouseover="over"></td><td class="node"></td>
-          <td class="beam" v-on:mouseover="over"></td><td class="node"></td><td class="shallow room"></td>
+          <td class="shallow room"></td><td class="node"></td><td class="beam" v-bind:class="{active_b:isActive_b10}" v-on:click="isActive_b10=!isActive_b10"></td>
+          <td class="node"></td><td class="beam" v-bind:class="{active_b:isActive_b11}" v-on:click="isActive_b11=!isActive_b11"></td><td class="node"></td>
+          <td class="beam" v-bind:class="{active_b:isActive_b12}" v-on:click="isActive_b12=!isActive_b12"></td><td class="node"></td><td class="shallow room"></td>
         </tr>
         <tr>
-          <td class="deep room"></td><td class="column" v-on:mouseover="over"></td><td class="deep room"></td>
-          <td class="column" v-on:mouseover="over"></td><td class="deep room"></td><td class="column" v-on:mouseover="over"></td>
-          <td class="deep room"></td><td class="column" v-on:mouseover="over"></td><td class="deep room"></td>
+          <td class="deep room"></td><td class="column" v-bind:class="{active_c:isActive_c13}" v-on:click="isActivec_13=!isActive_c13"></td><td class="deep room"></td>
+          <td class="column" v-bind:class="{active_c:isActive_c14}" v-on:click="isActive_c14=!isActive_c14"></td><td class="deep room"></td><td class="column" v-bind:class="{active_c:isActive_c15}" v-on:click="isActive_c15=!isActive_c15"></td>
+          <td class="deep room"></td><td class="column" v-bind:class="{active_c:isActive_c16}" v-on:click="isActive_c16=!isActive_c16"></td><td class="deep room"></td>
         </tr>
         <tr>
-          <td class="shallow room"></td><td class="node"></td><td class="beam" v-on:mouseover="over"></td>
-          <td class="node"></td><td class="beam" v-on:mouseover="over"></td><td class="node"></td>
-          <td class="beam" v-on:mouseover="over"></td><td class="node"></td><td class="shallow room"></td>
+          <td class="shallow room"></td><td class="node"></td><td class="beam" v-bind:class="{active_b:isActive_b13}" v-on:click="isActive_b13=!isActive_b13"></td>
+          <td class="node"></td><td class="beam" v-bind:class="{active_b:isActive_b14}" v-on:click="isActive_b14=!isActive_b14"></td><td class="node"></td>
+          <td class="beam" v-bind:class="{active_b:isActive_b15}" v-on:click="isActive_b15=!isActive_b15"></td><td class="node"></td><td class="shallow room"></td>
         </tr>
         <tr>
-          <td class="deep room"></td><td class="column" v-on:mouseover="over"></td><td class="deep room"></td>
-          <td class="column" v-on:mouseover="over"></td><td class="deep room"></td><td class="column" v-on:mouseover="over"></td>
-          <td class="deep room"></td><td class="column" v-on:mouseover="over"></td><td class="deep room"></td>
+          <td class="deep room"></td><td class="column" v-bind:class="{active_c:isActive_c17}" v-on:click="isActive_c17=!isActive_c17"></td><td class="deep room"></td>
+          <td class="column" v-bind:class="{active_c:isActive_c18}" v-on:click="isActive_c18=!isActive_c18"></td><td class="deep room"></td><td class="column" v-bind:class="{active_c:isActive_c19}" v-on:click="isActive_c19=!isActive_c19"></td>
+          <td class="deep room"></td><td class="column" v-bind:class="{active_c:isActive_c20}" v-on:click="isActive_c20=!isActive_c20"></td><td class="deep room"></td>
         </tr>
         <tr>
-          <td class="shallow room"></td><td class="node"></td><td class="beam" v-on:mouseover="over"></td>
-          <td class="node"></td><td class="beam" v-on:mouseover="over"></td><td class="node"></td>
-          <td class="beam" v-on:mouseover="over"></td><td class="node"></td><td class="shallow room"></td>
+          <td class="shallow room"></td><td class="node"></td><td class="beam" v-bind:class="{active_b:isActive_b16}" v-on:click="isActive_b16=!isActive_b16"></td>
+          <td class="node"></td><td class="beam" v-bind:class="{active_b:isActive_b17}" v-on:click="isActive_b17=!isActive_b17"></td><td class="node"></td>
+          <td class="beam" v-bind:class="{active_b:isActive_b18}" v-on:click="isActive_b18=!isActive_b18"></td><td class="node"></td><td class="shallow room"></td>
         </tr>
         <tr>
-          <td class="deep room"></td><td class="column" v-on:mouseover="over"></td><td class="deep room"></td>
-          <td class="column" v-on:mouseover="over"></td><td class="deep room"></td><td class="column" v-on:mouseover="over"></td>
-          <td class="deep room"></td><td class="column" v-on:mouseover="over"></td><td class="deep room"></td>
+          <td class="deep room"></td><td class="column" v-bind:class="{active_c:isActive_c21}" v-on:click="isActive_c21=!isActive_c21"></td><td class="deep room"></td>
+          <td class="column" v-bind:class="{active_c:isActive_c22}" v-on:click="isActive_c22=!isActive_c22"></td><td class="deep room"></td><td class="column" v-bind:class="{active_c:isActive_c23}" v-on:click="isActivec_23=!isActive_c23"></td>
+          <td class="deep room"></td><td class="column" v-bind:class="{active_c:isActive_c24}" v-on:click="isActive_c24=!isActive_c24"></td><td class="deep room"></td>
         </tr>
         <tr>
-          <td class="shallow room"></td><td class="node"></td><td class="beam" v-on:mouseover="over"></td>
-          <td class="node"></td><td class="beam" v-on:mouseover="over"></td><td class="node"></td>
-          <td class="beam" v-on:mouseover="over"></td><td class="node"></td><td class="shallow room"></td>
+          <td class="shallow room"></td><td class="node"></td><td class="beam" v-bind:class="{active_b:isActive_b19}" v-on:click="isActive_b19=!isActive_b19"></td>
+          <td class="node"></td><td class="beam" v-bind:class="{active_b:isActive_b20}" v-on:click="isActive_b20=!isActive_b20"></td><td class="node"></td>
+          <td class="beam" v-bind:class="{active_b:isActive_b21}" v-on:click="isActive_b21=!isActive_b21"></td><td class="node"></td><td class="shallow room"></td>
         </tr>
         <tr>
-          <td class="deep room"></td><td class="column" v-on:mouseover="over"></td><td class="deep room"></td>
-          <td class="column" v-on:mouseover="over"></td><td class="deep room"></td><td class="column" v-on:mouseover="over"></td>
-          <td class="deep room"></td><td class="column" v-on:mouseover="over"></td><td class="deep room"></td>
+          <td class="deep room"></td><td class="column" v-bind:class="{active_c:isActive_c25}" v-on:click="isActive_c25=!isActive_c25"></td><td class="deep room"></td>
+          <td class="column" v-bind:class="{active_c:isActive_c26}" v-on:click="isActive_c26=!isActive_c26"></td><td class="deep room"></td><td class="column" v-bind:class="{active_c:isActive_c27}" v-on:click="isActive_c27=!isActive_c27"></td>
+          <td class="deep room"></td><td class="column" v-bind:class="{active_c:isActive_c28}" v-on:click="isActive_C28=!isActive_c28"></td><td class="deep room"></td>
         </tr>
         <tr>
-          <td class="shallow room"></td><td class="node"></td><td class="beam" v-on:mouseover="over"></td>
-          <td class="node"></td><td class="beam" v-on:mouseover="over"></td><td class="node"></td>
-          <td class="beam" v-on:mouseover="over"></td><td class="node"></td><td class="shallow room"></td>
+          <td class="shallow room"></td><td class="node"></td><td class="beam" v-bind:class="{active_b:isActive_b22}" v-on:click="isActive_b22=!isActive_b22"></td>
+          <td class="node"></td><td class="beam" v-bind:class="{active_b:isActive_b23}" v-on:click="isActive_b23=!isActive_b23"></td><td class="node"></td>
+          <td class="beam" v-bind:class="{active_b:isActive_b24}" v-on:click="isActive_b24=!isActive_b24"></td><td class="node"></td><td class="shallow room"></td>
         </tr>
         <tr>
-          <td class="deep room"></td><td class="column" v-on:mouseover="over"></td><td class="deep room"></td>
-          <td class="column" v-on:mouseover="over"></td><td class="deep room"></td><td class="column" v-on:mouseover="over"></td>
-          <td class="deep room"></td><td class="column" v-on:mouseover="over"></td><td class="deep room"></td>
+          <td class="deep room"></td><td class="column" v-bind:class="{active_c:isActive_c29}" v-on:click="isActive_c29=!isActive_c29"></td><td class="deep room"></td>
+          <td class="column" v-bind:class="{active_c:isActive_c30}" v-on:click="isActive_c30=!isActive_c30"></td><td class="deep room"></td><td class="column" v-bind:class="{active_c:isActive_c31}" v-on:click="isActive_c31=!isActive_c31"></td>
+          <td class="deep room"></td><td class="column" v-bind:class="{active_c:isActive_c32}" v-on:click="isActiv_c32=!isActive_c32"></td><td class="deep room"></td>
         </tr>
         <tr>
-          <td class="shallow room"></td><td class="node"></td><td class="beam" v-on:mouseover="over"></td>
-          <td class="node"></td><td class="beam" v-on:mouseover="over"></td><td class="node"></td>
-          <td class="beam" v-on:mouseover="over"></td><td class="node"></td><td class="shallow room"></td>
+          <td class="shallow room"></td><td class="node"></td><td class="beam" v-bind:class="{active_b:isActive_b25}" v-on:click="isActive_b25=!isActive_b25"></td>
+          <td class="node"></td><td class="beam" v-bind:class="{active_b:isActive_b26}" v-on:click="isActive_b26=!isActive_b26"></td><td class="node"></td>
+          <td class="beam" v-bind:class="{active_b:isActive_b27}" v-on:click="isActive_b27=!isActive_b27"></td><td class="node"></td><td class="shallow room"></td>
         </tr>
         <tr>
-          <td class="deep room"></td><td class="column" v-on:mouseover="over"></td><td class="deep room"></td>
-          <td class="column" v-on:mouseover="over"></td><td class="deep room"></td><td class="column" v-on:mouseover="over"></td>
-          <td class="deep room"></td><td class="column" v-on:mouseover="over"></td><td class="deep room"></td>
+          <td class="deep room"></td><td class="column" v-bind:class="{active_c:isActive_c33}" v-on:click="isActive_c33=!isActive_c33"></td><td class="deep room"></td>
+          <td class="column" v-bind:class="{active_c:isActive_c34}" v-on:click="isActive_c34=!isActive_c34"></td><td class="deep room"></td><td class="column" v-bind:class="{active_c:isActive_c35}" v-on:click="isActive_c35=!isActive_c35"></td>
+          <td class="deep room"></td><td class="column" v-bind:class="{active_c:isActive_c36}" v-on:click="isActive_c36=!isActive_c36"></td><td class="deep room"></td>
         </tr>
         <tr>
-          <td class="shallow room"></td><td class="node"></td><td class="beam" v-on:mouseover="over"></td>
-          <td class="node"></td><td class="beam" v-on:mouseover="over"></td><td class="node"></td>
-          <td class="beam" v-on:mouseover="over"></td><td class="node"></td><td class="shallow room"></td>
+          <td class="shallow room"></td><td class="node"></td><td class="beam" v-bind:class="{active_b:isActive_b28}" v-on:click="isActive_b28=!isActive_b28"></td>
+          <td class="node"></td><td class="beam" v-bind:class="{active_b:isActive_b29}" v-on:click="isActive_b29=!isActive_b29"></td><td class="node"></td>
+          <td class="beam" v-bind:class="{active_b:isActive_b30}" v-on:click="isActive_b30=!isActive_b30"></td><td class="node"></td><td class="shallow room"></td>
         </tr>
         <tr>
-          <td class="deep room"></td><td class="column" v-on:mouseover="over"></td><td class="deep room"></td>
-          <td class="column" v-on:mouseover="over"></td><td class="deep room"></td><td class="column" v-on:mouseover="over"></td>
-          <td class="deep room"></td><td class="column" v-on:mouseover="over"></td><td class="deep room"></td>
+          <td class="deep room"></td><td class="column" v-bind:class="{active_c:isActive_c37}" v-on:click="isActive_c37=!isActive_c37"></td><td class="deep room"></td>
+          <td class="column" v-bind:class="{active_c:isActive_c38}" v-on:click="isActive_c38=!isActive_c38"></td><td class="deep room"></td><td class="column" v-bind:class="{active_c:isActive_c39}" v-on:click="isActive_c39=!isActive_c39"></td>
+          <td class="deep room"></td><td class="column" v-bind:class="{active_c:isActive_c40}" v-on:click="isActive_c40=!isActive_c40"></td><td class="deep room"></td>
         </tr>
       </table>
     </div>

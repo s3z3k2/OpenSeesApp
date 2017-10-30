@@ -51,3 +51,11 @@ body {
   height: 40px;
   background-color: #BDBDBD;
 }
+
+.active_c {
+  background-color: #0000FF;
+}
+
+.active_b {
+  background-color: #FF0000;
+}
